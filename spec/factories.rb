@@ -1,4 +1,9 @@
 FactoryGirl.define do
+  factory :category do
+    sequence :name do |n|
+      "MyString#{n}"
+    end
+  end
   factory :company do
     sequence :name do |n|
       "company#{n}"
@@ -13,8 +18,8 @@ FactoryGirl.define do
    level_of_interest 3
    city "Denver"
    company
+   category
   end
-#other stuff hopefully gets put here upon model generation
 
 
 
