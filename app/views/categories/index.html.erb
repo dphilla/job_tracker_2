@@ -1,7 +1,13 @@
 <h1> Check out a specific category:</h1>
 
-<%= @category.each do |category|  %>
+<% @category.each do |category|  %>
   <div>
     <%= link_to category.name, category_path(category) %>
+  </div>
+  <div>
+    <%= link_to "Edit", edit_category_path(category) %>
+  </div>
+  <div>
+    <%= link_to "Delete", category_path(category), method: :delete %>
   </div>
 <% end %>
