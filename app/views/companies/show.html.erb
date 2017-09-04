@@ -3,3 +3,10 @@ All Jobs for <strong><%= @company.name %></strong>
 <% @company.jobs.each do |job| %>
   <ul><%= job.title %></ul>
 <% end %>
+
+<div>
+  <%= render partial: 'contacts/index' %>
+</div>
+<div>
+  <%= render partial: 'contacts/form' %>
+</div>

@@ -1,5 +1,6 @@
 <div>
-  <% @comments.each do |comment| %>
+  <% @comments.reverse_each do |comment| %>
     <%= comment.content %>
+    <%= comment.created_at %>
    <% end %>
 </div>
