@@ -1,4 +1,8 @@
 FactoryGirl.define do
+  factory :comment do
+    content "MyString"
+    job nil
+  end
   factory :category do
     sequence :name do |n|
       "MyString#{n}"

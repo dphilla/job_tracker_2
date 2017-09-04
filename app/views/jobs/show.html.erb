@@ -10,4 +10,12 @@ Level of Interest: <%= @job.level_of_interest %>
 City: <%= @job.city %>
 <br>
 
+<div>
+  <%= render partial: "comments/index" %>
+</div>
+
+<div>
+  <%= render partial: 'comments/form' %>
+</div>
+
 Company: <%= link_to @job.company.name, company_path(@job.company) %>

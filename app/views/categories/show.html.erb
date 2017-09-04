@@ -1,5 +1,12 @@
 <%= @category.name %>
 
+<div>
+Jobs related to <%= @category.name %>:
+  <% @jobs.each do |job| %>
+    <p><%= job.title  %></p>
+    <p><%= job.company  %></p>
+  <% end %>
+</div>
 <%= link_to "Delete", category_path(@category), method: :delete %>
 
 <%= link_to "Edit", edit_category_path(@category) %>
