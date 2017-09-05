@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+
+  #for analytics
+  get '/jobs', to: 'jobs#jobs'
+
+  #for crudded resources
   resources :companies do
     resources :jobs do
       resources :comments, only: [:create, :index]
@@ -7,7 +12,9 @@ Rails.application.routes.draw do
     resources :contacts, only: [:create, :index]
   end
 
-   resources :categories
+  resources :categories
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
