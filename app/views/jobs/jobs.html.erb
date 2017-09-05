@@ -1,1 +1,6 @@
-<%= @jobs %>
+<% @jobs.each do |job| %>
+  <p><%= job.title %></p>
+  <p><%= job.city %></p>
+  <p><%= job.level_of_interest %></p>
+<% end %>
+

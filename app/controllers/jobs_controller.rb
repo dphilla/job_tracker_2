@@ -1,8 +1,22 @@
 class JobsController < ApplicationController
 
   def jobs
-    @jobs = params
+    byebug
+    if params[:sort] == "location"
+       @jobs = Job.location
+    elsif params[:sort] == :interest
+       @jobs = Job.level_of_interest
+    elsif params[:location] != nil
+       @jobs = Job.specific_location(params[:location])
+    else
+      @jobs = Job.all
+    end
   end
+
+  def dashboard
+
+  end
+
 
   def index
     @company = Company.find(params[:company_id])

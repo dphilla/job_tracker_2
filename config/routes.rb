@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   #for analytics
   get '/jobs', to: 'jobs#jobs'
+  get '/dashboard', to: 'jobs#dashboard'
 
   #for crudded resources
   resources :companies do
