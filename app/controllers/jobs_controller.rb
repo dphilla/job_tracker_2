@@ -1,7 +1,6 @@
 class JobsController < ApplicationController
 
   def jobs
-    byebug
     if params[:sort] == "location"
        @jobs = Job.location
     elsif params[:sort] == :interest
@@ -14,7 +13,8 @@ class JobsController < ApplicationController
   end
 
   def dashboard
-
+    #see above
+    #next steps, build-out dashboard here
   end
 
 
